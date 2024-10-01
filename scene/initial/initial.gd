@@ -1,3 +1,4 @@
+
 extends Control
 
 
@@ -11,4 +12,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_btn_start_pressed():
-	get_tree().change_scene_to_file("res://level1/level1.tscn")
+	get_tree().change_scene_to_file("res://scene/level1/level1.tscn")

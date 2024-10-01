@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://c68qxsdwv3van"]
 
 [ext_resource type="Texture2D" uid="uid://cf0ytygx8v350" path="res://Godot Engine 실전 2D 어드벤처 게임 제작 - 자료/배경/Gray.png" id="1_0kga5"]
-[ext_resource type="Script" path="res://배경화면/배경화면.gd" id="1_07pwb"]
+[ext_resource type="Script" path="res://scene/background/background.gd" id="1_07pwb"]
 [ext_resource type="Texture2D" uid="uid://bj5dnkhdwu7q5" path="res://Godot Engine 실전 2D 어드벤처 게임 제작 - 자료/배경/Green.png" id="2_h55tt"]
 
-[node name="배경화면" type="ParallaxBackground"]
+[node name="background" type="ParallaxBackground"]
 script = ExtResource("1_07pwb")
 bgImage = ExtResource("2_h55tt")
 

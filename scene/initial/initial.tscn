@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://lw4uba63yr2o"]
 
-[ext_resource type="FontFile" uid="uid://bmpms5j4taoxa" path="res://Godot Engine 실전 2D 어드벤처 게임 제작 - 자료/폰트/DOSIyagiBoldface.ttf" id="1_2qs1t"]
-[ext_resource type="Script" path="res://시작화면/시작화면.gd" id="1_csf3o"]
-[ext_resource type="Texture2D" uid="uid://brcaccpsutnsw" path="res://Godot Engine 실전 2D 어드벤처 게임 제작 - 자료/캐릭터/Ninja Frog/Jump (32x32).png" id="2_38ajg"]
-[ext_resource type="PackedScene" uid="uid://c68qxsdwv3van" path="res://배경화면/배경화면.tscn" id="3_ap32i"]
+[ext_resource type="Script" path="res://scene/initial/initial.gd" id="1_ufo25"]
+[ext_resource type="FontFile" uid="uid://bmpms5j4taoxa" path="res://Godot Engine 실전 2D 어드벤처 게임 제작 - 자료/폰트/DOSIyagiBoldface.ttf" id="2_keqn6"]
+[ext_resource type="Texture2D" uid="uid://brcaccpsutnsw" path="res://Godot Engine 실전 2D 어드벤처 게임 제작 - 자료/캐릭터/Ninja Frog/Jump (32x32).png" id="3_alvtu"]
+[ext_resource type="PackedScene" uid="uid://c68qxsdwv3van" path="res://scene/background/background.tscn" id="4_gbvqf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_extmc"]
-font = ExtResource("1_2qs1t")
+font = ExtResource("2_keqn6")
 font_size = 90
 font_color = Color(0.0523184, 0.55905, 0.449703, 1)
 outline_size = 3
@@ -15,14 +15,14 @@ shadow_size = 4
 shadow_color = Color(0.717647, 0.478431, 0.972549, 0.447059)
 shadow_offset = Vector2(2, 12)
 
-[node name="시작화면" type="Control"]
+[node name="initial" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_csf3o")
+script = ExtResource("1_ufo25")
 
 [node name="txtTitle" type="Label" parent="."]
 layout_mode = 1
@@ -67,8 +67,8 @@ grow_vertical = 0
 
 [node name="개구리이미지" type="Sprite2D" parent="Container"]
 scale = Vector2(8.332, 8)
-texture = ExtResource("2_38ajg")
+texture = ExtResource("3_alvtu")
 
-[node name="배경화면" parent="." instance=ExtResource("3_ap32i")]
+[node name="배경화면" parent="." instance=ExtResource("4_gbvqf")]
 
 [connection signal="pressed" from="btnStart" to="." method="_on_btn_start_pressed"]
