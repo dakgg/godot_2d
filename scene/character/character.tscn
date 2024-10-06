@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b1asf0k35sjws"]
+[gd_scene load_steps=31 format=3 uid="uid://b1asf0k35sjws"]
 
 [ext_resource type="Texture2D" uid="uid://h4706q3ncu2j" path="res://Godot Engine 실전 2D 어드벤처 게임 제작 - 자료/캐릭터/Ninja Frog/Fall (32x32).png" id="1_6nmq0"]
 [ext_resource type="Script" path="res://scene/character/character.gd" id="1_wk5ou"]
@@ -196,6 +196,9 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rl6y"]
+size = Vector2(20, 23)
+
 [node name="Character" type="CharacterBody2D"]
 position = Vector2(-2, -1)
 script = ExtResource("1_wk5ou")
@@ -203,7 +206,9 @@ script = ExtResource("1_wk5ou")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_7f0ce")
-animation = &"idle"
+animation = &"fall"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_0rl6y")
